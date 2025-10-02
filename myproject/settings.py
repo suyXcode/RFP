@@ -83,16 +83,18 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # }
 
 
-import dj_database_url
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "salah99.pythonanywhere.com"]
+
+
+
 
 # Replace it with your DATABASES.
+import dj_database_url
+ALLOWED_HOSTS = ["rfp.up.railway.app"]
 DATABASES = {
-    'default': dj_database_url.config(
-        default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
-    )
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
+
 
 
 # Password validation
@@ -136,4 +138,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
